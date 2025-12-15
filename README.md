@@ -1,3 +1,10 @@
+## Why This Repository?
+
+Localization in Blazor is often shown in fragments.
+This project provides a complete, working, and production-friendly setup for
+English–Arabic localization in a Blazor Web App using .NET 10.
+
+
 # Blazor Localization (English – Arabic)
 
 A simple and practical example of implementing localization in a Blazor Web Application using .NET 10.
