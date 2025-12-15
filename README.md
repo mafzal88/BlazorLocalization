@@ -39,6 +39,16 @@ This project demonstrates:
 
 ---
 
+## Preview
+
+### English
+![English UI](app-screens/en-UI.jpg)
+
+### Arabic
+![Arabic UI](app-screens/ar-UI.jpg)
+
+---
+
 ## Running the Project
 1. Clone the repository  
    ```bash
