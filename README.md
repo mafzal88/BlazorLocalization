@@ -17,6 +17,16 @@ This project demonstrates:
 
 ---
 
+![License](https://img.shields.io/github/license/mafzal88/BlazorLocalization)
+![.NET](https://img.shields.io/badge/.NET-8%20%7C%2010-blue)
+![Stars](https://img.shields.io/github/stars/your-username/your-repo-name?style=social)
+![Last Commit](https://img.shields.io/github/last-commit/your-username/your-repo-name)
+
+
+
+
+
+
 ## Tech Stack
 - .NET 10
 - Blazor Web App
