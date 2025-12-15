@@ -1,0 +1,40 @@
+﻿@using System.Globalization
+@using Microsoft.Extensions.Options
+@inject NavigationManager NavigationManager
+@inject IOptions<RequestLocalizationOptions> LocOptions // Ensure this is injected
+@rendermode RenderMode.InteractiveServer
+
+
+<div>
+    <label for="culture-select">Language:</label>
+    <select id="culture-select" @onchange="OnLanguageChange" class="form-select form-select-sm" style="width: auto;">
+        @if (LocOptions.Value.SupportedUICultures != null)
+        {
+            foreach (var culture in LocOptions.Value.SupportedUICultures)
+            {
+                <option value="@culture.Name" selected="@(CultureInfo.CurrentUICulture.Name == culture.Name)">
+                    @culture.DisplayName
+                </option>
+            }
+        }
+    </select>
+</div>
+
+@code {
+    private void OnLanguageChange(ChangeEventArgs e)
+    {
+        var culture = (string)e.Value!;
+        if (CultureInfo.CurrentUICulture.Name != culture)
+        {
+            // Ensure redirectUri is correctly capturing the current path
+            var currentUri = new Uri(NavigationManager.Uri);
+            var redirectUri = currentUri.LocalPath + currentUri.Query; // More robust way to get current path and query
+
+            // Construct the query for the controller
+            var query = $"?culture={Uri.EscapeDataString(culture)}&redirectUri={Uri.EscapeDataString(redirectUri)}";
+
+            // Navigate to the controller action to set the cookie and refresh
+            NavigationManager.NavigateTo($"/Culture/Set{query}", forceLoad: true);
+        }
+    }
+}

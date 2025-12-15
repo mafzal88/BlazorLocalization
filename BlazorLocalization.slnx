@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="BlazorLocalization.AppHost/BlazorLocalization.AppHost.csproj" />
+  <Project Path="BlazorLocalization.ServiceDefaults/BlazorLocalization.ServiceDefaults.csproj" />
+  <Project Path="ClientUI/ClientUI.csproj" />
+</Solution>
