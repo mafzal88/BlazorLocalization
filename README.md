@@ -35,7 +35,7 @@ This project demonstrates:
 ## Running the Project
 1. Clone the repository  
    ```bash
-   git clone https://github.com/your-username/blazor-localization-en-ar.git
+   git clone https://github.com/mafzal88/BlazorLocalization.git
  
 2. Open the solution in Visual Studio 2026
 3. Run the project
